@@ -7,7 +7,7 @@
     @vite('resources/css/form.scss')
     <title>@yield('title')</title>
 </head>
-<body class="{{ Route::is('show-result') ? '' : 'centered-layout' }}">
+<body class="{{ Route::is('show-result') || Route::is('show-numbers') ? '' : 'centered-layout' }}">
     @yield('content')
 </body>
 </html>

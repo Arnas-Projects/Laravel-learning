@@ -35,6 +35,5 @@ class PostFormSumController extends Controller
         $result = session('sum', 'Nėra ką sumuoti');
 
         return view('forms.post_sum', ['sum' => $result]);
-        
     }
 }

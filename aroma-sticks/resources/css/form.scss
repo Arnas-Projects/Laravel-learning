@@ -84,7 +84,7 @@ button:active {
 }
 
 
-
+// ======================================== //
 
 div.sum-container {
     display: flex;
@@ -100,5 +100,77 @@ div.sum-container {
 
     h3 {
         margin-right: 10px;
+    }
+}
+
+
+// ======================================== //
+
+.storage-container {
+    color: white;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 22px;
+
+    h3 {
+        margin-bottom: 15px;
+    }
+
+    p.numbers-container {
+        display: flex;
+        gap: 15px;
+
+        span.number {
+            padding: 5px 12px;
+            background-color: #14919b;
+            border-radius: 7px;
+        }
+    }
+
+    .wipe-container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        button {
+            font-size: 20px;
+            background-color: #ae1f37;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #0d7377;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #14919b;
+        }
+
+        a:active {
+            background-color: #0a5a61;
+        }
+    }
+
+    a.back-link {
+        text-decoration: none;
+        color: white;
+        background-color: #0d7377;
+        padding: 12px 20px;
+        border-radius: 4px;
+        font-size: 20px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #14919b;
+        }
+
+        &:active {
+            background-color: #0a5a61;
+        }
     }
 }

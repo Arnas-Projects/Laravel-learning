@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController as Home;
 use App\Http\Controllers\PostFormSumController as PostSum;
+use App\Http\Controllers\NumStorageController as NumStore;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,22 @@ Route::get('/homepage', [Home::class, 'initiateHomepage']);
     PAPILDOMAI: Galima padaryti mygtuką, kuris viską ištrina
 */
 
+// 1 užduotis
 Route::get('/post', [PostSum::class, 'showSumPostForm']);
 Route::post('/post-sum', [PostSum::class, 'countSumPostForm'])->name('count-sum');
 Route::get('/post-sum', [PostSum::class, 'showCountedSum'])->name('show-result');
+
+
+// 2 užduotis
+Route::get('/show-form', [NumStore::class, 'showStorageForm'])->name('forma-titulinis');
+Route::post('/post-storage', [NumStore::class, 'storeNumber'])->name('store-number');
+Route::get('/post-storage', [NumStore::class, 'showNumbers'])->name('show-numbers');
+
+Route::post('/post-clear-storage', [NumStore::class, 'clearNumbers'])->name('clear-numbers');
+
+
+
+Route::get('/clear-session', function () {
+    session()->forget('numbers');
+    return 'Session cleared';
+});
